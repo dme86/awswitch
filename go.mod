@@ -1,4 +1,4 @@
-module github.com/pjaudiomv/awsd
+module github.com/dme86/awswitch
 
 go 1.18
 

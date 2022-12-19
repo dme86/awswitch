@@ -28,7 +28,7 @@ func newPromptUISearcher(items []string) list.Searcher {
 
 func main() {
 	if len(os.Args) > 1 && os.Args[1] == "version" {
-		fmt.Println("awsd version", version)
+		fmt.Println("awswitch version", version)
 		os.Exit(0)
 	}
 	home := os.Getenv("HOME")
@@ -70,7 +70,7 @@ func writeFile(profile, loc string) {
 	if profile != "default" {
 		s = []byte(profile)
 	}
-	err := os.WriteFile(fmt.Sprintf("%s/.awsd", loc), s, 0644)
+	err := os.WriteFile(fmt.Sprintf("%s/.awswitch", loc), s, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
